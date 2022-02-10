@@ -271,7 +271,7 @@ def LQRStep(n_state,
         else:
             return v[t]
 
-    class LQRStepFn(Function):
+    class LQRStepFn(Module):
         # @profile
         def forward(ctx, x_init, C, c, F, f=None):
             if no_op_forward:
